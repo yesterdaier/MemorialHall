@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英灵殿 · 管理后台</title>
+    <style>
+        :root {
+            --bg: #080808; --surface: #111; --surface2: #181818;
+            --border: #2a2a2a; --gold: #cfaa6e; --gold-dim: rgba(207,170,110,0.15);
+            --red: #8b0000; --text: #c0c0c0; --text-dim: #666;
+            --font: "SimSun", "Songti SC", serif; --font-ui: "SimHei", "Heiti SC", sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: var(--text); font-family: var(--font); min-height: 100vh; }
+
+        /* 顶栏 */
+        .topbar {
+            background: #000; border-bottom: 2px solid var(--gold);
+            padding: 16px 30px; display: flex; align-items: center; gap: 16px; position: sticky; top: 0; z-index: 100;
+        }
+        .topbar-title { font-size: 1.3rem; color: var(--gold); font-family: var(--font-ui); letter-spacing: 3px; }
+        .topbar-actions { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+
+        /* GitHub 配置区 */
+        .github-config {
+            background: #0a0a0a; border-bottom: 1px solid #1a1a1a;
+            padding: 14px 30px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+        }
+        .config-label { font-size: 0.8rem; color: #666; font-family: var(--font-ui); letter-spacing: 1px; white-space: nowrap; }
+        .config-input {
+            background: #111; border: 1px solid #333; color: #aaa;
+            padding: 6px 12px; font-family: monospace; font-size: 0.85rem;
+            outline: none; transition: border-color 0.2s;
+        }
+        .config-input:focus { border-color: var(--gold); color: var(--text); }
+        .config-input.wide { width: 200px; }
+        .config-input.token { width: 280px; }
+        .config-status { font-size: 0.8rem; padding: 5px 12px; border: 1px solid #333; color: #666; font-family: var(--font-ui); }
+        .config-status.ok { border-color: #2d6a2d; color: #5cb85c; background: rgba(45,106,45,0.1); }
+        .config-status.err { border-color: #6a2d2d; color: #d62828; background: rgba(106,45,45,0.1); }
+
+        /* 主布局 */
+        .layout { display: grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 110px); }
+
+        /* 左侧列表 */
+        .sidebar { background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; }
+        .sidebar-head { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+        .sidebar-head-title { font-family: var(--font-ui); color: var(--gold); letter-spacing: 2px; font-size: 0.9rem; }
+        .char-list { flex: 1; overflow-y: auto; }
+        .char-item {
+            padding: 14px 18px; border-bottom: 1px solid var(--border); cursor: pointer;
+            transition: 0.2s; display: flex; align-items: center; gap: 12px;
+        }
+        .char-item:hover { background: #1a1a1a; }
+        .char-item.active { background: #1e1a10; border-left: 3px solid var(--gold); }
+        .char-mini-info { flex: 1; min-width: 0; }
+        .char-mini-name { font-family: var(--font-ui); font-size: 0.95rem; color: #ddd; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .char-mini-status { font-size: 0.75rem; margin-top: 2px; color: var(--text-dim); }
+        .status-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+        .dot-honor { background: #4da6ff; } .dot-purged { background: #d62828; } .dot-normal { background: #666; }
+
+        /* 编辑区 */
+        .editor { padding: 30px 36px; overflow-y: auto; }
+        .editor-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: var(--text-dim); text-align: center; gap: 12px; }
+        .editor-empty-icon { font-size: 2.5rem; opacity: 0.3; }
+
+        /* 表单 */
+        .form-title { font-size: 1.2rem; color: var(--gold); font-family: var(--font-ui); letter-spacing: 3px; border-bottom: 1px solid #2a2a2a; padding-bottom: 14px; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+        .form-badge { font-size: 0.7rem; padding: 2px 8px; background: #1a1a1a; border: 1px solid #333; color: #666; }
+        .form-sections { display: flex; flex-direction: column; gap: 24px; }
+        .form-section { background: var(--surface2); border: 1px solid var(--border); }
+        .section-header { background: #141414; padding: 10px 18px; font-family: var(--font-ui); font-size: 0.82rem; color: #777; letter-spacing: 2px; border-bottom: 1px solid var(--border); }
+        .section-body { padding: 18px; display: flex; flex-direction: column; gap: 14px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .form-group { display: flex; flex-direction: column; gap: 5px; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-label { font-size: 0.78rem; color: #777; font-family: var(--font-ui); letter-spacing: 1px; }
+        .form-label span { color: #d62828; }
+        .form-input, .form-select, .form-textarea {
+            background: #0d0d0d; border: 1px solid #2a2a2a; color: var(--text);
+            padding: 8px 12px; font-family: var(--font); font-size: 0.92rem;
+            outline: none; transition: border-color 0.2s; width: 100%;
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
+        .form-textarea { resize: vertical; min-height: 70px; line-height: 1.7; }
+        .form-select { cursor: pointer; }
+
+        /* 颜色选择器 */
+        .color-row { display: flex; gap: 8px; align-items: center; }
+        input[type="color"] { width: 38px; height: 34px; border: 1px solid #333; background: none; cursor: pointer; padding: 2px; flex-shrink: 0; }
+        .color-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+        .chip { width: 22px; height: 22px; border: 2px solid transparent; cursor: pointer; transition: 0.15s; flex-shrink: 0; }
+        .chip:hover { border-color: var(--gold); transform: scale(1.2); }
+
+        /* 动态列表 */
+        .dyn-item {
+            background: #0d0d0d; border: 1px solid #222; padding: 10px 12px;
+            display: flex; gap: 8px; align-items: center;
+        }
+        .dyn-item input, .dyn-item select { flex: 1; }
+        .btn-del { background: none; border: 1px solid #3d0505; color: #c62828; padding: 4px 8px; cursor: pointer; font-size: 0.78rem; flex-shrink: 0; transition: 0.15s; }
+        .btn-del:hover { background: #3d0505; }
+        .btn-add-row { background: none; border: 1px dashed #333; color: #555; padding: 8px; cursor: pointer; width: 100%; font-family: var(--font-ui); font-size: 0.82rem; transition: 0.2s; letter-spacing: 1px; }
+        .btn-add-row:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* 文章 */
+        .article-block { background: #0c0c0c; border: 1px solid #222; margin-bottom: 10px; }
+        .article-block-head { padding: 10px 14px; display: flex; align-items: center; gap: 8px; background: #111; border-bottom: 1px solid #1a1a1a; cursor: pointer; }
+        .article-key-badge { font-size: 0.72rem; color: #666; background: #1a1a1a; border: 1px solid #2a2a2a; padding: 2px 7px; font-family: monospace; }
+        .article-title-preview { flex: 1; font-size: 0.88rem; color: #aaa; }
+        .article-body-fields { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
+
+        /* 状态标签 */
+        .status-tags { display: flex; gap: 8px; }
+        .status-tag { padding: 5px 14px; border: 1px solid #333; background: #0d0d0d; color: #555; font-size: 0.8rem; cursor: pointer; transition: 0.2s; font-family: var(--font-ui); }
+        .status-tag.sel-honor { border-color: #4da6ff; color: #4da6ff; background: rgba(77,166,255,0.08); }
+        .status-tag.sel-purged { border-color: #d62828; color: #d62828; background: rgba(214,40,40,0.08); }
+        .status-tag.sel-normal { border-color: #888; color: #aaa; background: #1a1a1a; }
+
+        /* 按钮 */
+        .btn { padding: 9px 20px; font-family: var(--font-ui); font-size: 0.88rem; cursor: pointer; transition: 0.2s; letter-spacing: 1px; border: 1px solid; }
+        .btn-gold { background: var(--gold-dim); border-color: var(--gold); color: var(--gold); }
+        .btn-gold:hover { background: var(--gold); color: #000; }
+        .btn-danger { background: rgba(139,0,0,0.15); border-color: #8b0000; color: #d62828; }
+        .btn-danger:hover { background: #8b0000; color: #fff; }
+        .btn-green { background: rgba(45,90,45,0.2); border-color: #2d6a2d; color: #5cb85c; }
+        .btn-green:hover { background: #2d6a2d; color: #fff; }
+        .btn-sm { padding: 6px 14px; font-size: 0.82rem; }
+        .form-actions { display: flex; gap: 10px; padding-top: 6px; flex-wrap: wrap; }
+
+        /* 发布弹窗 */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 999; display: none; align-items: center; justify-content: center; }
+        .modal-overlay.show { display: flex; }
+        .modal { background: #111; border: 1px solid var(--gold); width: 520px; max-width: 95vw; }
+        .modal-head { padding: 18px 24px; border-bottom: 1px solid #222; display: flex; align-items: center; justify-content: space-between; }
+        .modal-title { font-family: var(--font-ui); color: var(--gold); letter-spacing: 2px; }
+        .modal-body { padding: 24px; }
+        .modal-foot { padding: 16px 24px; border-top: 1px solid #222; display: flex; justify-content: flex-end; gap: 10px; }
+        .progress-bar { height: 4px; background: #1a1a1a; margin: 20px 0; overflow: hidden; }
+        .progress-fill { height: 100%; background: var(--gold); transition: width 0.4s; }
+        .log-line { font-family: monospace; font-size: 0.82rem; color: #666; padding: 2px 0; }
+        .log-line.ok { color: #5cb85c; }
+        .log-line.err { color: #d62828; }
+        .log-line.info { color: var(--gold); }
+
+        /* toast */
+        .toast { position: fixed; bottom: 24px; right: 24px; background: #111; border: 1px solid var(--gold); color: var(--gold); padding: 10px 20px; font-family: var(--font-ui); font-size: 0.88rem; letter-spacing: 1px; opacity: 0; transform: translateY(8px); transition: 0.3s; pointer-events: none; z-index: 9999; }
+        .toast.show { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 800px) { .layout { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<!-- 顶栏 -->
+<div class="topbar">
+    <span style="font-size:1.5rem">🕯️</span>
+    <div class="topbar-title">英灵殿 · 管理后台</div>
+    <div class="topbar-actions">
+        <button class="btn btn-green btn-sm" onclick="openPublishModal()">🚀 发布到 GitHub</button>
+        <a href="./index.html" target="_blank" class="btn btn-gold btn-sm" style="text-decoration:none">👁 预览网站</a>
+    </div>
+</div>
+
+<!-- GitHub 配置 -->
+<div class="github-config">
+    <span class="config-label">🔗 GitHub 配置</span>
+    <span class="config-label">用户名:</span>
+    <input class="config-input wide" id="cfg_user" placeholder="你的GitHub用户名" oninput="saveConfig()">
+    <span class="config-label">仓库名:</span>
+    <input class="config-input wide" id="cfg_repo" placeholder="仓库名称" oninput="saveConfig()">
+    <span class="config-label">分支:</span>
+    <input class="config-input" id="cfg_branch" value="main" style="width:80px" oninput="saveConfig()">
+    <span class="config-label">Token:</span>
+    <input class="config-input token" id="cfg_token" type="password" placeholder="ghp_xxxx (Fine-grained Token)" oninput="saveConfig()">
+    <button class="btn btn-gold btn-sm" onclick="testGitHub()">验证连接</button>
+    <span class="config-status" id="configStatus">未验证</span>
+</div>
+
+<!-- 主布局 -->
+<div class="layout">
+    <div class="sidebar">
+        <div class="sidebar-head">
+            <div class="sidebar-head-title">入 殿 英 灵</div>
+            <button class="btn btn-gold btn-sm" onclick="addChar()">＋ 新增</button>
+        </div>
+        <div class="char-list" id="charList"></div>
+    </div>
+    <div class="editor" id="editor">
+        <div class="editor-empty">
+            <div class="editor-empty-icon">⚱️</div>
+            <div style="font-size:0.88rem;letter-spacing:2px;line-height:2">选择左侧人物开始编辑<br>或点击「新增」添加新入殿者</div>
+        </div>
+    </div>
+</div>
+
+<!-- 发布弹窗 -->
+<div class="modal-overlay" id="publishModal">
+    <div class="modal">
+        <div class="modal-head">
+            <div class="modal-title">🚀 发布到 GitHub Pages</div>
+            <button onclick="closeModal()" style="background:none;border:none;color:#666;cursor:pointer;font-size:1.2rem">✕</button>
+        </div>
+        <div class="modal-body">
+            <div style="font-size:0.88rem;color:#888;margin-bottom:16px;line-height:1.8">
+                此操作将把当前编辑的数据 <code style="color:var(--gold)">data.json</code> 推送到你的 GitHub 仓库，GitHub Actions 将自动重新部署网站。
+            </div>
+            <div class="form-group">
+                <label class="form-label">提交说明（可选）</label>
+                <input class="form-input" id="commitMsg" value="更新英灵殿人物数据" placeholder="本次更新说明">
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+            <div id="publishLog" style="max-height:180px;overflow-y:auto"></div>
+        </div>
+        <div class="modal-foot">
+            <button class="btn btn-danger btn-sm" onclick="closeModal()">取消</button>
+            <button class="btn btn-green" id="publishBtn" onclick="doPublish()">确认发布</button>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ===================== 数据 =====================
+let characters = [];
+let currentId = null;
+
+// ===================== 配置存储 =====================
+function saveConfig() {
+    localStorage.setItem('gh_user', document.getElementById('cfg_user').value);
+    localStorage.setItem('gh_repo', document.getElementById('cfg_repo').value);
+    localStorage.setItem('gh_branch', document.getElementById('cfg_branch').value);
+    localStorage.setItem('gh_token', document.getElementById('cfg_token').value);
+}
+function loadConfig() {
+    document.getElementById('cfg_user').value = localStorage.getItem('gh_user') || '';
+    document.getElementById('cfg_repo').value = localStorage.getItem('gh_repo') || '';
+    document.getElementById('cfg_branch').value = localStorage.getItem('gh_branch') || 'main';
+    document.getElementById('cfg_token').value = localStorage.getItem('gh_token') || '';
+}
+function getCfg() {
+    return {
+        user: document.getElementById('cfg_user').value.trim(),
+        repo: document.getElementById('cfg_repo').value.trim(),
+        branch: document.getElementById('cfg_branch').value.trim() || 'main',
+        token: document.getElementById('cfg_token').value.trim()
+    };
+}
+
+// ===================== 验证 GitHub =====================
+async function testGitHub() {
+    const { user, repo, token } = getCfg();
+    const el = document.getElementById('configStatus');
+    if (!user || !repo || !token) { el.className = 'config-status err'; el.textContent = '信息不完整'; return; }
+    el.className = 'config-status'; el.textContent = '验证中...';
+    try {
+        const res = await fetch(`https://api.github.com/repos/${user}/${repo}`, {
+            headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' }
+        });
+        if (res.ok) { el.className = 'config-status ok'; el.textContent = '✓ 连接成功'; }
+        else { el.className = 'config-status err'; el.textContent = `✗ 错误 ${res.status}`; }
+    } catch(e) { el.className = 'config-status err'; el.textContent = '✗ 网络错误'; }
+}
+
+// ===================== 发布到 GitHub =====================
+function openPublishModal() {
+    if (currentId) readForm(); // 先保存当前编辑
+    document.getElementById('publishModal').classList.add('show');
+    document.getElementById('progressFill').style.width = '0%';
+    document.getElementById('publishLog').innerHTML = '';
+    document.getElementById('publishBtn').disabled = false;
+}
+function closeModal() { document.getElementById('publishModal').classList.remove('show'); }
+
+function addLog(msg, type = '') {
+    const div = document.createElement('div');
+    div.className = 'log-line ' + type;
+    div.textContent = msg;
+    document.getElementById('publishLog').appendChild(div);
+    div.scrollIntoView();
+}
+function setProgress(pct) { document.getElementById('progressFill').style.width = pct + '%'; }
+
+async function doPublish() {
+    const { user, repo, branch, token } = getCfg();
+    if (!user || !repo || !token) { showToast('请先填写 GitHub 配置并验证'); return; }
+
+    document.getElementById('publishBtn').disabled = true;
+    document.getElementById('publishLog').innerHTML = '';
+    setProgress(10);
+
+    const commitMsg = document.getElementById('commitMsg').value || '更新英灵殿人物数据';
+    const content = JSON.stringify({ siteTitle: '素草英灵殿', footer: '© 2026 长崎素世爱与吐槽吧群 / 水电站宣传部 / 乌思藏青年茶话会', characters }, null, 2);
+    const encoded = btoa(unescape(encodeURIComponent(content)));
+
+    addLog('▶ 连接 GitHub API...', 'info');
+    setProgress(20);
+
+    try {
+        // 获取当前文件的 sha（更新时需要）
+        const path = 'data.json';
+        const fileUrl = `https://api.github.com/repos/${user}/${repo}/contents/${path}`;
+        const headers = { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' };
+
+        let sha = null;
+        addLog('▶ 获取现有文件信息...', 'info');
+        const existing = await fetch(fileUrl + `?ref=${branch}`, { headers });
+        if (existing.ok) {
+            const data = await existing.json();
+            sha = data.sha;
+            addLog('✓ 找到已有 data.json，将执行更新', 'ok');
+        } else if (existing.status === 404) {
+            addLog('✓ data.json 不存在，将创建新文件', 'ok');
+        } else {
+            throw new Error(`获取文件失败: ${existing.status}`);
+        }
+        setProgress(50);
+
+        addLog('▶ 推送数据到仓库...', 'info');
+        const body = { message: commitMsg, content: encoded, branch };
+        if (sha) body.sha = sha;
+
+        const putRes = await fetch(fileUrl, { method: 'PUT', headers, body: JSON.stringify(body) });
+        if (!putRes.ok) {
+            const err = await putRes.json();
+            throw new Error(err.message || `推送失败: ${putRes.status}`);
+        }
+        setProgress(85);
+        addLog('✓ data.json 已推送到 GitHub！', 'ok');
+        addLog('▶ GitHub Actions 开始自动部署...', 'info');
+        setProgress(100);
+
+        const pageUrl = `https://${user}.github.io/${repo}/`;
+        addLog(`✓ 部署将在约 1-2 分钟内完成`, 'ok');
+        addLog(`  网站地址: ${pageUrl}`, 'ok');
+
+        document.getElementById('publishBtn').textContent = '✓ 已发布';
+        showToast('✓ 发布成功！约 1-2 分钟后生效');
+    } catch(e) {
+        addLog('✗ 错误: ' + e.message, 'err');
+        document.getElementById('publishBtn').disabled = false;
+        setProgress(0);
+    }
+}
+
+// ===================== 渲染列表 =====================
+function renderList() {
+    document.getElementById('charList').innerHTML = characters.map(c => `
+        <div class="char-item ${c.id === currentId ? 'active' : ''}" onclick="selectChar('${c.id}')">
+            <div class="char-mini-info">
+                <div class="char-mini-name">${c.name}</div>
+                <div class="char-mini-status">${c.statusText || '（无状态描述）'}</div>
+            </div>
+            <div class="status-dot ${c.status === 'honor' ? 'dot-honor' : c.status === 'purged' ? 'dot-purged' : 'dot-normal'}"></div>
+        </div>`
+    ).join('');
+}
+
+// ===================== 选择人物 =====================
+function selectChar(id) {
+    if (currentId) readForm(); // 保存上一个
+    currentId = id;
+    renderList();
+    renderEditor();
+}
+
+// ===================== 新增人物 =====================
+function addChar() {
+    const id = 'char_' + Date.now();
+    characters.push({
+        id, name: '新入殿英灵', status: 'normal', statusText: '', imagePath: '',
+        deathDate: new Date().toISOString().split('T')[0], deathDateLabel: '离开我们',
+        bgColorFrom: '#1a2a3a', borderColor: '#4da6ff',
+        coupletLeft: '此处填写左联', coupletRight: '此处填写右联',
+        hallTitle: '英灵同志纪念堂', hallSubtitle: '', hasStamp: false, stampText: '',
+        funeralCommittee: '',
+        banners: [{ text: '横幅文字', style: 'im-style', articleKey: 'main' }],
+        sidebarNav: [{ tag: '悼词', label: '正文', articleKey: 'main', style: '' }],
+        articles: [{ key: 'main', title: '悼念文章', meta: '治丧委员会', body: '<p>在此填写正文内容。</p>' }]
+    });
+    selectChar(id);
+}
+
+// ===================== 渲染编辑器 =====================
+function renderEditor() {
+    const c = characters.find(x => x.id === currentId);
+    if (!c) return;
+
+    const colorPresets = [
+        ['#4da6ff','蓝'],['#d62828','红'],['#cfaa6e','金'],
+        ['#5cb85c','绿'],['#a64dff','紫'],['#ff8c00','橙']
+    ];
+    const bgPresets = [
+        ['#1a2a3a','蓝'],['#1a0505','红'],['#1a1505','金'],
+        ['#051505','绿'],['#1a051a','紫'],['#1a1005','橙']
+    ];
+
+    document.getElementById('editor').innerHTML = `
+        <div class="form-title">
+            编辑英灵档案
+            <span class="form-badge">ID: ${c.id}</span>
+        </div>
+        <div class="form-sections">
+
+            <!-- 基本信息 -->
+            <div class="form-section">
+                <div class="section-header">📋 基本信息</div>
+                <div class="section-body">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">英灵名称 <span>*</span></label>
+                            <input class="form-input" id="f_name" value="${e(c.name)}">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">纪念堂标题</label>
+                            <input class="form-input" id="f_hallTitle" value="${e(c.hallTitle)}">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">状态类型</label>
+                            <div class="status-tags">
+                                <div class="status-tag ${c.status==='honor'?'sel-honor':''}" onclick="setStatus('honor',this)">光荣隐退</div>
+                                <div class="status-tag ${c.status==='purged'?'sel-purged':''}" onclick="setStatus('purged',this)">永久撤销</div>
+                                <div class="status-tag ${c.status==='normal'?'sel-normal':''}" onclick="setStatus('normal',this)">正常纪念</div>
+                            </div>
+                            <input type="hidden" id="f_status" value="${c.status}">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">状态说明（英灵殿首页显示）</label>
+                            <input class="form-input" id="f_statusText" value="${e(c.statusText)}" placeholder="如：光荣隐退 · 回归现实">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">纪念堂副标题</label>
+                            <input class="form-input" id="f_hallSubtitle" value="${e(c.hallSubtitle)}" placeholder="如：致我们终将逝去的时光">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">印章</label>
+                            <div style="display:flex;gap:8px;align-items:center">
+                                <label style="display:flex;align-items:center;gap:5px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap">
+                                    <input type="checkbox" id="f_hasStamp" ${c.hasStamp?'checked':''} onchange="document.getElementById('f_stampText').disabled=!this.checked"> 显示印章
+                                </label>
+                                <input class="form-input" id="f_stampText" value="${e(c.stampText)}" placeholder="印章文字" ${c.hasStamp?'':'disabled'} style="flex:1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 头像与时间 -->
+            <div class="form-section">
+                <div class="section-header">🖼 头像与计时器</div>
+                <div class="section-body">
+                    <div class="form-group full">
+                        <label class="form-label">头像路径（同目录 images/ 文件夹或网络URL）</label>
+                        <input class="form-input" id="f_imagePath" value="${e(c.imagePath)}" placeholder="images/xxx.jpg">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">离开日期 <span>*</span></label>
+                            <input type="date" class="form-input" id="f_deathDate" value="${c.deathDate}">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">计时器标签文字</label>
+                            <input class="form-input" id="f_deathDateLabel" value="${e(c.deathDateLabel)}" placeholder="如：Im 光荣隐退">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 视觉主题 -->
+            <div class="form-section">
+                <div class="section-header">🎨 视觉主题</div>
+                <div class="section-body">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">背景主色调（渐变起点）</label>
+                            <div class="color-row">
+                                <input type="color" id="f_bgColorFrom" value="${c.bgColorFrom}" oninput="syncColorText('f_bgColorFrom','bgText')">
+                                <input class="form-input" id="bgText" value="${c.bgColorFrom}" oninput="document.getElementById('f_bgColorFrom').value=this.value" style="flex:1">
+                            </div>
+                            <div class="color-chips" style="margin-top:8px">
+                                ${bgPresets.map(([v,n])=>`<div class="chip" style="background:${v}" title="${n}" onclick="setColor('f_bgColorFrom','bgText','${v}')"></div>`).join('')}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">强调色（边框/挽联/文章标题）</label>
+                            <div class="color-row">
+                                <input type="color" id="f_borderColor" value="${c.borderColor}" oninput="syncColorText('f_borderColor','bcText')">
+                                <input class="form-input" id="bcText" value="${c.borderColor}" oninput="document.getElementById('f_borderColor').value=this.value" style="flex:1">
+                            </div>
+                            <div class="color-chips" style="margin-top:8px">
+                                ${colorPresets.map(([v,n])=>`<div class="chip" style="background:${v}" title="${n}" onclick="setColor('f_borderColor','bcText','${v}')"></div>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 挽联 -->
+            <div class="form-section">
+                <div class="section-header">🏮 挽联（水晶棺两侧竖排文字）</div>
+                <div class="section-body">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">左联</label>
+                            <input class="form-input" id="f_coupletLeft" value="${e(c.coupletLeft)}">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">右联</label>
+                            <input class="form-input" id="f_coupletRight" value="${e(c.coupletRight)}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 横幅 -->
+            <div class="form-section">
+                <div class="section-header">📢 通告横幅（纪念堂内，可多条）</div>
+                <div class="section-body">
+                    <div id="bannerList">
+                        ${c.banners.map(b=>`
+                        <div class="dyn-item">
+                            <input class="form-input banner-text" value="${e(b.text)}" placeholder="横幅文字">
+                            <select class="form-select banner-style" style="width:130px;flex:none">
+                                <option value="im-style" ${b.style==='im-style'?'selected':''}>蓝色</option>
+                                <option value="denied" ${b.style==='denied'?'selected':''}>灰色划线</option>
+                                <option value="critical" ${b.style==='critical'?'selected':''}>红色警告</option>
+                                <option value="" ${b.style===''?'selected':''}>无样式</option>
+                            </select>
+                            <input class="form-input banner-key" value="${e(b.articleKey)}" placeholder="文章key" style="width:100px;flex:none">
+                            <button class="btn-del" onclick="this.closest('.dyn-item').remove()">✕</button>
+                        </div>`).join('')}
+                    </div>
+                    <button class="btn-add-row" onclick="addBanner()">＋ 添加横幅</button>
+                </div>
+            </div>
+
+            <!-- 侧边导航 -->
+            <div class="form-section">
+                <div class="section-header">📑 右侧导航列表（「文章key」需与下方文章对应）</div>
+                <div class="section-body">
+                    <div id="navList">
+                        ${c.sidebarNav.map(n=>`
+                        <div class="dyn-item">
+                            <input class="form-input nav-tag" value="${e(n.tag)}" placeholder="标签" style="width:80px;flex:none">
+                            <input class="form-input nav-label" value="${e(n.label)}" placeholder="显示文字">
+                            <input class="form-input nav-key" value="${e(n.articleKey)}" placeholder="文章key" style="width:100px;flex:none">
+                            <button class="btn-del" onclick="this.closest('.dyn-item').remove()">✕</button>
+                        </div>`).join('')}
+                    </div>
+                    <button class="btn-add-row" onclick="addNav()">＋ 添加导航项</button>
+                </div>
+            </div>
+
+            <!-- 治丧委员会 -->
+            <div class="form-section">
+                <div class="section-header">👥 治丧委员会（选填，支持HTML）</div>
+                <div class="section-body">
+                    <textarea class="form-textarea" id="f_funeralCommittee" style="min-height:55px">${e(c.funeralCommittee)}</textarea>
+                </div>
+            </div>
+
+            <!-- 文章内容 -->
+            <div class="form-section">
+                <div class="section-header">📰 文章内容（支持HTML，&lt;p&gt;标签换段落）</div>
+                <div class="section-body">
+                    <div style="font-size:0.78rem;color:#555;margin-bottom:8px">每篇文章的「key」是唯一标识，横幅和导航通过 key 关联文章</div>
+                    <div id="articleList">
+                        ${c.articles.map((a,i)=>renderArticle(a,i)).join('')}
+                    </div>
+                    <button class="btn-add-row" onclick="addArticle()">＋ 添加文章</button>
+                </div>
+            </div>
+
+            <!-- 操作 -->
+            <div class="form-actions">
+                <button class="btn btn-gold" onclick="saveAndRefresh()">💾 保存</button>
+                <button class="btn btn-danger" onclick="deleteChar('${c.id}')" style="margin-left:auto">🗑 移除此英灵</button>
+            </div>
+        </div>`;
+}
+
+function renderArticle(a, i) {
+    return `<div class="article-block">
+        <div class="article-block-head" onclick="toggleArticle(this)">
+            <span class="article-key-badge">key: ${e(a.key)||'(未填)'}</span>
+            <span class="article-title-preview">${e(a.title)||'(未命名)'}</span>
+            <span style="color:#555;font-size:0.8rem;flex-shrink:0">▼ 展开/折叠</span>
+        </div>
+        <div class="article-body-fields">
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">文章 key（英文，唯一）<span>*</span></label>
+                    <input class="form-input art-key" value="${e(a.key)}" placeholder="如：editorial" oninput="this.closest('.article-block').querySelector('.article-key-badge').textContent='key: '+this.value">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">文章标题</label>
+                    <input class="form-input art-title" value="${e(a.title)}" oninput="this.closest('.article-block').querySelector('.article-title-preview').textContent=this.value">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">来源/日期（meta）</label>
+                <input class="form-input art-meta" value="${e(a.meta)}" placeholder="如：治丧委员会 | 2025年12月">
+            </div>
+            <div class="form-group">
+                <label class="form-label">正文（HTML格式）</label>
+                <textarea class="form-textarea art-body" style="min-height:150px;font-family:monospace;font-size:0.82rem">${e(a.body)}</textarea>
+            </div>
+            <div style="text-align:right">
+                <button class="btn btn-danger btn-sm" onclick="this.closest('.article-block').remove()">删除此文章</button>
+            </div>
+        </div>
+    </div>`;
+}
+
+function toggleArticle(head) {
+    const fields = head.nextElementSibling;
+    fields.style.display = fields.style.display === 'none' ? '' : 'none';
+}
+
+// ===================== 读取表单 =====================
+function readForm() {
+    const c = characters.find(x => x.id === currentId);
+    if (!c) return;
+    const v = id => { const el = document.getElementById(id); return el ? el.value : ''; };
+    c.name = v('f_name');
+    c.status = v('f_status');
+    c.statusText = v('f_statusText');
+    c.imagePath = v('f_imagePath');
+    c.deathDate = v('f_deathDate');
+    c.deathDateLabel = v('f_deathDateLabel');
+    c.bgColorFrom = document.getElementById('f_bgColorFrom')?.value || c.bgColorFrom;
+    c.borderColor = document.getElementById('f_borderColor')?.value || c.borderColor;
+    c.coupletLeft = v('f_coupletLeft');
+    c.coupletRight = v('f_coupletRight');
+    c.hallTitle = v('f_hallTitle');
+    c.hallSubtitle = v('f_hallSubtitle');
+    c.hasStamp = document.getElementById('f_hasStamp')?.checked || false;
+    c.stampText = v('f_stampText');
+    c.funeralCommittee = v('f_funeralCommittee');
+
+    c.banners = [...document.querySelectorAll('.banner-text')].map((el, i) => ({
+        text: el.value,
+        style: document.querySelectorAll('.banner-style')[i]?.value || '',
+        articleKey: document.querySelectorAll('.banner-key')[i]?.value || ''
+    }));
+    c.sidebarNav = [...document.querySelectorAll('.nav-tag')].map((el, i) => ({
+        tag: el.value,
+        label: document.querySelectorAll('.nav-label')[i]?.value || '',
+        articleKey: document.querySelectorAll('.nav-key')[i]?.value || '',
+        style: ''
+    }));
+    c.articles = [...document.querySelectorAll('.article-block')].map(block => ({
+        key: block.querySelector('.art-key')?.value || '',
+        title: block.querySelector('.art-title')?.value || '',
+        meta: block.querySelector('.art-meta')?.value || '',
+        body: block.querySelector('.art-body')?.value || ''
+    }));
+}
+
+function saveAndRefresh() {
+    readForm();
+    renderList();
+    showToast('✓ 已保存（记得点「发布到 GitHub」同步到网站）');
+}
+
+// ===================== 辅助 =====================
+function e(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+function setStatus(val, el) {
+    document.getElementById('f_status').value = val;
+    document.querySelectorAll('.status-tag').forEach(t => t.className = 'status-tag');
+    if (val === 'honor') el.classList.add('sel-honor');
+    else if (val === 'purged') el.classList.add('sel-purged');
+    else el.classList.add('sel-normal');
+}
+
+function syncColorText(colorId, textId) {
+    document.getElementById(textId).value = document.getElementById(colorId).value;
+}
+function setColor(colorId, textId, val) {
+    document.getElementById(colorId).value = val;
+    document.getElementById(textId).value = val;
+}
+
+function addBanner() {
+    const list = document.getElementById('bannerList');
+    const div = document.createElement('div');
+    div.className = 'dyn-item';
+    div.innerHTML = `<input class="form-input banner-text" value="" placeholder="横幅文字"><select class="form-select banner-style" style="width:130px;flex:none"><option value="im-style">蓝色</option><option value="denied">灰色划线</option><option value="critical">红色警告</option><option value="">无样式</option></select><input class="form-input banner-key" value="" placeholder="文章key" style="width:100px;flex:none"><button class="btn-del" onclick="this.closest('.dyn-item').remove()">✕</button>`;
+    list.appendChild(div);
+}
+function addNav() {
+    const list = document.getElementById('navList');
+    const div = document.createElement('div');
+    div.className = 'dyn-item';
+    div.innerHTML = `<input class="form-input nav-tag" value="" placeholder="标签" style="width:80px;flex:none"><input class="form-input nav-label" value="" placeholder="显示文字"><input class="form-input nav-key" value="" placeholder="文章key" style="width:100px;flex:none"><button class="btn-del" onclick="this.closest('.dyn-item').remove()">✕</button>`;
+    list.appendChild(div);
+}
+function addArticle() {
+    const list = document.getElementById('articleList');
+    const div = document.createElement('div');
+    div.innerHTML = renderArticle({ key: 'new_' + Date.now(), title: '新文章', meta: '', body: '<p>正文内容。</p>' }, Date.now());
+    list.appendChild(div.firstElementChild);
+}
+
+function deleteChar(id) {
+    if (!confirm('确认将此英灵从殿中移除？')) return;
+    characters = characters.filter(c => c.id !== id);
+    currentId = null;
+    renderList();
+    document.getElementById('editor').innerHTML = `<div class="editor-empty"><div class="editor-empty-icon">⚱️</div><div style="font-size:0.88rem;letter-spacing:2px">人物已删除</div></div>`;
+}
+
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+// ===================== 初始化：从 data.json 加载 =====================
+async function init() {
+    loadConfig();
+    try {
+        const res = await fetch('./data.json?t=' + Date.now());
+        if (res.ok) {
+            const data = await res.json();
+            characters = data.characters || [];
+            showToast('✓ 已从 data.json 加载现有数据');
+        }
+    } catch(e) {
+        // 使用空数据，静默处理
+    }
+    renderList();
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+{
+  "siteTitle": "素草英灵殿",
+  "footer": "© 2026 长崎素世爱与吐槽吧群 / 水电站宣传部 / 乌思藏青年茶话会",
+  "characters": [
+    {
+      "id": "im",
+      "name": "Image𝚍𝚞𝚗𝚞𝚊𝚐𝚎",
+      "status": "honor",
+      "statusText": "光荣隐退 · 回归现实",
+      "imagePath": "images/im.jpg",
+      "deathDate": "2026-01-30",
+      "deathDateLabel": "Im 光荣隐退",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "盗师创群垂千古",
+      "coupletRight": "素草接力有来人",
+      "hallTitle": "Image𝚍𝚞𝚗𝚞𝚊𝚐𝚎 同志纪念堂",
+      "hallSubtitle": "致我们终将逝去的时光",
+      "hasStamp": false,
+      "stampText": "",
+      "funeralCommittee": "<strong>核心成员：</strong>洗涤剂量子、秋、眼镜豆<br><strong>参与群众：</strong>全体长崎素世爱与吐槽吧群友、乌思藏青年茶话会成员",
+      "banners": [
+        { "text": "乌 思 藏 青 年 茶 话 会 社 论", "style": "im-style", "articleKey": "editorial" }
+      ],
+      "sidebarNav": [
+        { "tag": "社论", "label": "沉痛悼念Im同志", "articleKey": "editorial", "style": "" },
+        { "tag": "诗词", "label": "群友挽诗三首", "articleKey": "poems", "style": "" }
+      ],
+      "articles": [
+        {
+          "key": "editorial",
+          "title": "乌思藏青年茶话会社论",
+          "meta": "来源：茶话会宣传部 | 2026年1月",
+          "body": "<p>在悼念曾经的领导集体核心 <strong>Image𝚍𝚞𝚗𝚞𝚊𝚐𝚎</strong> 同志从茶话会隐退的活动中，多名老同志纷纷现身，表示哀悼，致敬哀思。</p>\n<p>广大吧务、吧友、小吧、群友、管理员以各种形式表达自己的哀思，并表示要化悲痛为力量，为实现吧群扩张贡献力量。</p>\n<p>在悼念活动期间，秋风萧瑟，落叶含悲，大家神情严肃，沉痛怀念。</p>\n<p><strong>Image𝚍𝚞𝚗𝚞𝚊𝚐𝚎</strong> 同志虽然离开了网络前线，但我们将继承他的遗志，继续投身茶话会事业，让压抑永续传承，把素草群建设得更加美好！</p>"
+        },
+        {
+          "key": "poems",
+          "title": "群友挽诗选编",
+          "meta": "收录群友投稿",
+          "body": "<div style=\"text-align:center; padding: 20px; background: rgba(255,255,255,0.05); margin-bottom: 30px;\">\n<h3 style=\"color: var(--text-gold); margin-bottom:15px;\">《挽Im同志》</h3>\n<p class=\"poem-line\">二十毋劳论废兴，素草接力有来人。</p>\n<p class=\"poem-line\">盗师创群垂千古，基辈跟随欲望沉。</p>\n<p class=\"poem-line\">数十愚公齐破力，五群权簒共沉沦。</p>\n<p class=\"poem-line\">本夫悲作黎明颂，满目绿水月照阴。</p>\n</div>\n<div style=\"text-align:center; padding: 20px; background: rgba(255,255,255,0.05);\">\n<h3 style=\"color: var(--text-gold); margin-bottom:15px;\">《登素槽楼·怀古》</h3>\n<p class=\"poem-line\">im已乘素世去，此地空余素槽楼。</p>\n<p class=\"poem-line\">im一去不复返，山头千载空悠悠。</p>\n<p class=\"poem-line\">晴川历历上海树，芳草萋萋华亭洲。</p>\n<p class=\"poem-line\">日暮乡关何处是，黄浦江上使人愁。</p>\n</div>"
+        }
+      ]
+    },
+    {
+      "id": "ml",
+      "name": "水银灯",
+      "status": "purged",
+      "statusText": "素草罪人 · 永久封存",
+      "imagePath": "images/ml.jpg",
+      "deathDate": "2025-11-17",
+      "deathDateLabel": "水银灯离开我们",
+      "bgColorFrom": "#1a0505",
+      "borderColor": "#8b0000",
+      "coupletLeft": "千群共忆？？音容",
+      "coupletRight": "万古长夜？？魂归",
+      "hallTitle": "水银灯？同志纪念堂",
+      "hallSubtitle": "致我们青涩的感情",
+      "hasStamp": true,
+      "stampText": "已撤销",
+      "funeralCommittee": "",
+      "banners": [
+        { "text": "告 全 吧 全 群 各 群 友 书", "style": "denied", "articleKey": "letter" },
+        { "text": "关于《撤销水银灯悼词、开除其群籍》的公告", "style": "critical", "articleKey": "truth_report" }
+      ],
+      "sidebarNav": [
+        { "tag": "最终号", "label": "关于撤销悼念的决议", "articleKey": "final_notice", "style": "color:#ff4d4d" },
+        { "tag": "公告", "label": "开除群籍决定", "articleKey": "truth_report", "style": "color:#ffcc00" },
+        { "tag": "旧文", "label": "(已作废) 告全群书", "articleKey": "letter", "style": "opacity:0.6" }
+      ],
+      "articles": [
+        {
+          "key": "truth_report",
+          "title": "关于开除水银灯群籍、撤销悼词的决定",
+          "meta": "水电站特别法庭 | 2025年12月19日",
+          "body": "<p><strong>全群群友们：</strong></p>\n<p>2025年11月18日，我们曾怀着沉痛的心情，播发了关于水银灯"因故离开群聊"的讣告，并给予了其极高的评价。然而，经过群核心5人特别法庭为期一个月的缜密侦查与取证，一个惊天的政治骗局已被彻底揭穿。</p>\n<p>经查，<b>水银灯（UID: 已注销）</b>完全背离了诚实水群的根本原则，长期以来编造身份、伪造履历，欺骗组织、欺骗群众。</p>\n<p>第一，<b>身份造假，欺世盗名。</b>水银灯自称系"中国人民大学"在读学生，然而其真实IP地址长期稳定显示在<b>广西壮族自治区</b>，所谓"人大才女"，实为"广西一名身份不明人员"。</p>\n<p>第二，<b>性别成谜，人设崩塌。</b>作为一个标榜"王教授忠实梦女"的账号，直到其销号跑路，特别法庭竟无法核实其生物学性别。</p>\n<p>第三，<b>拉帮结派，搞团团伙伙。</b>水银灯系<b>"LMK、水银灯假燕妮集团"</b>的主要骨干成员。</p>\n<p>鉴于上述行为，群中央决定：</p>\n<p style=\"text-align: center; font-weight: bold; color: #d62828; border: 2px solid #333; padding: 10px; margin: 20px 0;\">一、开除水银灯的群籍，永不录用；<br>二、撤销相关悼词，定性为"历史虚无主义错误文件"；<br>三、将其遗像作废处理，向全群公布其造假罪行，以正视听！</p>\n<p>虽然水银灯已经销号跑路，特别法庭决定不再追究其刑事责任，但其钉在群聊耻辱柱上的名字，将永远警示后来人：<b>互联网并非法外之地。</b></p>"
+        },
+        {
+          "key": "letter",
+          "title": "告全吧全群各群友书（已撤销）",
+          "meta": "水银灯治丧委员会 | 2025年11月17日",
+          "body": "<div style=\"border: 2px dashed #d62828; background-color: rgba(60, 0, 0, 0.5); color: #ff4d4d; padding: 15px; text-align: center; font-weight: bold; font-size: 1.1rem; margin-bottom: 20px; border-radius: 4px;\">严 正 声 明<br>本文已由治丧委员会通过决议永久撤销<br>现仅作为历史材料供全群批判参考</div>\n<p><strong>吧务会、群中央、水银灯同志治丧委员会，极其悲痛地向全群群友公告：</strong></p>\n<p>我们敬爱的群友、伟大的自由主义战士、王教授的忠实梦女<strong>水银灯</strong>同志，因账号注销，于2025年11月17日0时0分永远离开了我们。</p>\n<p>水银灯同志虽然离开了我们，但我们将继承其遗志，继续建设更加繁荣昌盛的素草群！</p>\n<p style=\"text-align:center; margin-top:50px; font-size:1.5rem; font-weight:bold;\">水 银 灯 同 志 永 垂 不 朽！</p>"
+        },
+        {
+          "key": "final_notice",
+          "title": "治丧委员会最后一号通告",
+          "meta": "发布时间：2025年12月19日",
+          "body": "<p><b>关于终止水银灯悼念活动并追究其责任的通报</b></p>\n<p>经水银灯问题特别法庭核查，水银灯存在重大身份造假嫌疑，包括但不限于学历造假，身世不明，性别成谜等。</p>\n<p>鉴于其问题严重程度，群中央就于2025年12月19日做出如下决定：</p>\n<p>1. <b>开除其群籍；</b></p>\n<p>2. <b>撤销对他的悼词；</b></p>\n<p>3. <b>将其悼念内容从纪念馆取出并向全群公布其罪行。</b></p>\n<p style=\"text-align:right; margin-top:20px;\"><b>水银灯问题特别法庭</b><br>2025年12月19日</p>"
+        }
+      ]
+    }
+  ]
+}
