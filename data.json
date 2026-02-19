@@ -18,13 +18,27 @@
       "hallSubtitle": "致我们终将逝去的时光",
       "hasStamp": false,
       "stampText": "",
-      "funeralCommittee": "<strong>核心成员：</strong>洗涤剂量子、秋、眼镜豆<br><strong>参与群众：</strong>全体长崎素世爱与吐槽吧群友、乌思藏青年茶话会成员",
+      "funeralCommittee": "<strong>核心成员：</strong>洗涤剂量子、秋、眼镜豆、sa、风水云、吹角清寒、不知<br><strong>参与群众：</strong>全体长崎素世爱与吐槽吧群友、乌思藏青年茶话会成员",
       "banners": [
-        { "text": "乌 思 藏 青 年 茶 话 会 社 论", "style": "im-style", "articleKey": "editorial" }
+        {
+          "text": "乌 思 藏 青 年 茶 话 会 社 论",
+          "style": "im-style",
+          "articleKey": "editorial"
+        }
       ],
       "sidebarNav": [
-        { "tag": "社论", "label": "沉痛悼念Im同志", "articleKey": "editorial", "style": "" },
-        { "tag": "诗词", "label": "群友挽诗三首", "articleKey": "poems", "style": "" }
+        {
+          "tag": "社论",
+          "label": "沉痛悼念Im同志",
+          "articleKey": "editorial",
+          "style": ""
+        },
+        {
+          "tag": "诗词",
+          "label": "群友挽诗三首",
+          "articleKey": "poems",
+          "style": ""
+        }
       ],
       "articles": [
         {
@@ -57,34 +71,98 @@
       "hallSubtitle": "致我们青涩的感情",
       "hasStamp": true,
       "stampText": "已撤销",
-      "funeralCommittee": "",
+      "funeralCommittee": "<strong>委员名单：</strong>Imagedunuage、眼镜豆、洗涤剂量子、秋、sa、鑫<br><strong>参与群众：</strong>全体长崎素世爱与吐槽吧群友、新世纪百货商场成员",
       "banners": [
-        { "text": "告 全 吧 全 群 各 群 友 书", "style": "denied", "articleKey": "letter" },
-        { "text": "关于《撤销水银灯悼词、开除其群籍》的公告", "style": "critical", "articleKey": "truth_report" }
+        {
+          "text": "告 全 吧 全 群 各 群 友 书",
+          "style": "denied",
+          "articleKey": "letter"
+        },
+        {
+          "text": "关于《撤销水银灯悼词、开除其群籍》的公告",
+          "style": "critical",
+          "articleKey": "truth_report"
+        }
       ],
       "sidebarNav": [
-        { "tag": "最终号", "label": "关于撤销悼念的决议", "articleKey": "final_notice", "style": "color:#ff4d4d" },
-        { "tag": "公告", "label": "开除群籍决定", "articleKey": "truth_report", "style": "color:#ffcc00" },
-        { "tag": "旧文", "label": "(已作废) 告全群书", "articleKey": "letter", "style": "opacity:0.6" }
+        {
+          "tag": "最终号",
+          "label": "关于撤销悼念的决议",
+          "articleKey": "final_notice",
+          "style": ""
+        },
+        {
+          "tag": "公告",
+          "label": "开除群籍决定",
+          "articleKey": "truth_report",
+          "style": ""
+        },
+        {
+          "tag": "旧文",
+          "label": "(已作废) 告全群书",
+          "articleKey": "letter",
+          "style": ""
+        }
       ],
       "articles": [
         {
           "key": "truth_report",
           "title": "关于开除水银灯群籍、撤销悼词的决定",
-          "meta": "水电站特别法庭 | 2025年12月19日",
+          "meta": "水银灯问题特别法庭 | 2025年12月19日",
           "body": "<p><strong>全群群友们：</strong></p>\n<p>2025年11月18日，我们曾怀着沉痛的心情，播发了关于水银灯“因故离开群聊”的讣告，并给予了其极高的评价。然而，经过群核心5人特别法庭为期一个月的缜密侦查与取证，一个惊天的政治骗局已被彻底揭穿。</p>\n<p>经查，<b>水银灯（UID: 已注销）</b>完全背离了诚实水群的根本原则，长期以来编造身份、伪造履历，欺骗组织、欺骗群众。</p>\n<p>第一，<b>身份造假，欺世盗名。</b>水银灯自称系“中国人民大学”在读学生，然而其真实IP地址长期稳定显示在<b>广西壮族自治区</b>，所谓“人大才女”，实为广西一名身份不明人员。</p>\n<p>第二，<b>性别成谜，人设崩塌。</b>作为一个标榜“王教授忠实梦女”的账号，直到其销号跑路，特别法庭竟无法核实其生物学性别。</p>\n<p>第三，<b>拉帮结派，搞团团伙伙。</b>水银灯系<b>“LMK、水银灯假燕妮集团”</b>的主要骨干成员。</p>\n<p>鉴于上述行为，群中央决定：</p>\n<p style=\"text-align: center; font-weight: bold; color: #d62828; border: 2px solid #333; padding: 10px; margin: 20px 0;\">一、开除水银灯的群籍，永不录用；<br>二、撤销相关悼词，定性为“历史虚无主义错误文件”；<br>三、将其遗像作废处理，向全群公布其造假罪行，以正视听！</p>\n<p>虽然水银灯已经销号跑路，特别法庭决定不再追究其刑事责任，但其钉在群聊耻辱柱上的名字，将永远警示后来人：<b>互联网并非法外之地。</b></p>"
         },
         {
           "key": "letter",
           "title": "告全吧全群各群友书（已撤销）",
           "meta": "水银灯治丧委员会 | 2025年11月17日",
-          "body": "<div style=\"border: 2px dashed #d62828; background-color: rgba(60, 0, 0, 0.5); color: #ff4d4d; padding: 15px; text-align: center; font-weight: bold; font-size: 1.1rem; margin-bottom: 20px; border-radius: 4px;\">严 正 声 明<br>本文已由治丧委员会通过决议永久撤销<br>现仅作为历史材料供全群批判参考</div>\n<p><strong>吧务会、群中央、水银灯同志治丧委员会，极其悲痛地向全群群友公告：</strong></p>\n<p>我们敬爱的群友、伟大的自由主义战士、王教授的忠实梦女<strong>水银灯</strong>同志，因账号注销，于2025年11月17日0时0分永远离开了我们。</p>\n<p>水银灯同志虽然离开了我们，但我们将继承其遗志，继续建设更加繁荣昌盛的素草群！</p>\n<p style=\"text-align:center; margin-top:50px; font-size:1.5rem; font-weight:bold;\">水 银 灯 同 志 永 垂 不 朽！</p>"
+          "body": "                    <div style=\"\n                        border: 2px dashed #d62828; \n                        background-color: rgba(60, 0, 0, 0.5); \n                        color: #ff4d4d; \n                        padding: 15px; \n                        text-align: center; \n                        font-weight: bold; \n                        font-size: 1.1rem; \n                        margin-bottom: 20px;\n                        border-radius: 4px;\">\n                        严 正 声 明<br>\n                        本文已经由治丧委员会通过决议永久撤销<br>\n                        现仅作为历史材料供全群批判参考\n                    </div>                    <p><strong>吧务会、群中央、水银灯同志治丧委员会，极其悲痛地向全群群友公告：</strong></p>\n                    <p>我们敬爱的群友、伟大的自由主义战士、王教授的忠实梦女、长崎素世爱槽吧群的杰出群友、小汕头的主要缔造者、久经考验的水群战士、素草群友大压抑运抵的精神领袖<strong>水银灯</strong>同志，因账号注销，于2025年11月17日0时0分永远离开了我们。</p>\n                    <p>水银灯同志于2025年10月加入长期素世爱槽吧群，是以绩溪soyorin、梦指导为领导核心的素草群的重要成员。加入长崎素世爱与吐槽吧群以来，长期以高强度水群技艺、对王教授高山仰止的梦女情怀和独特的燕妮风范，为群聊注入了无穷的活力。她全程参与并领导了2025年10月末爆发的素草群友大压抑运动，以无与伦比的深厚学养，调动了广大群友的压抑积极性，受到广大群友的深重爱戴和尊敬。2025年10月31日素草水电站小汕头成立后，她深度参与了汕头的创建和建设工作，是小汕头的主要缔造者之一和以性压抑为纲路线的先行者，为日后裆政分开工作打下了坚实的基础。</p>\n                    <p>2025年11月4日开始，水银灯同志由于学业原因，逐渐脱离了群聊的管理、建设岗位。这一期间，以鑫为代表的素草群友通过私聊、抖音等各种形式向水银灯同志传达了群友们的关切与慰问。2025年11月17日，因个人原因，水银灯同志决定注销账号，永远的离开了我们。在她离开的最后时刻，她依然心系群聊发展，嘱托群务会和治丧委员会继续发扬她的水群精神，建设一个更加繁荣昌盛的长崎素世爱与吐槽吧群。</p>\n                    <p>水银灯同志的离去，是我群不可估量的损失。在长期的水群斗争中，她始终站在工作的第一线，以无与伦比的傲娇精神和高强度的在线时长，团结了广大群友，巩固了群聊热度。</p>\n                    <p>我们号召全群群友，化悲痛为力量，继承水银灯同志的遗志，更加紧密地团结在以洗涤剂量子为核心的长崎素世吐槽吧群领导集体周围，把建设“百人在线、千人复读”的现代化强群事业推向前进！</p>\n                    <p style=\"text-align:center; margin-top:50px; font-size:1.5rem; font-weight:bold;\">水 银 灯 同 志 永 垂 不 朽！</p>"
         },
         {
           "key": "final_notice",
           "title": "治丧委员会最后一号通告",
-          "meta": "发布时间：2025年12月19日",
-          "body": "<p><b>关于终止水银灯悼念活动并追究其责任的通报</b></p>\n<p>经水银灯问题特别法庭核查，水银灯存在重大身份造假嫌疑，包括但不限于学历造假，身世不明，性别成谜等。</p>\n<p>鉴于其问题严重程度，群中央就于2025年12月19日做出如下决定：</p>\n<p>1. <b>开除其群籍；</b></p>\n<p>2. <b>撤销对他的悼词；</b></p>\n<p>3. <b>将其悼念内容从纪念馆取出并向全群公布其罪行。</b></p>\n<p style=\"text-align:right; margin-top:20px;\"><b>水银灯问题特别法庭</b><br>2025年12月19日</p>"
+          "meta": "水银灯治丧委员会 | 2025年12月19日",
+          "body": "            <p><b>关于终止水银灯悼念活动并追究其责任的通报</b></p>\n            <p>2025年11月18日晚，长崎素世爱槽吧水电站广播电台播发的一则讣告称，一个被誉为“伟大的自由主义战士”、“人大的伟大马克思主义理论家”和“光荣的水群战士”的水银灯因故离开群聊。</p>\n            <p>但时隔仅仅一个月，情况发生根本性逆转。经水银灯问题特别法庭核查，水银灯存在重大身份造假嫌疑，包括但不限于学历造假，身世不明，性别成谜等。</p>\n            <p>鉴于其问题严重程度，群中央就于2025年12月19日做出如下决定：</p>\n            <p>1. <b>开除其群籍；</b></p>\n            <p>2. <b>撤销对他的悼词；</b></p>\n            <p>3. <b>将其悼念内容从水银灯纪念馆取出并向全群公布其罪行。</b></p>\n            <p>随后，水银灯问题特别法庭确认，其系<b>lmk、水银灯假燕妮集团</b>主犯。鉴于其已离开群聊，不再追究刑事责任，但全群应引以为戒，旗帜鲜明地反对网络造假。</p>\n            <p style=\"text-align:right; margin-top:20px;\"><b>水银灯问题特别法庭</b><br>2025年12月19日</p>\n"
+        }
+      ]
+    },
+    {
+      "id": "char_1771468545632",
+      "name": "高尔夫球爱好者",
+      "status": "purged",
+      "statusText": "",
+      "imagePath": "images/golf.jpg",
+      "deathDate": "2026-02-19",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "流毒纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
         }
       ]
     }
