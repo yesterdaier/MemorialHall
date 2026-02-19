@@ -132,7 +132,7 @@
       "statusText": "素草流毒 · 遗臭万年",
       "imagePath": "images/golf.jpg",
       "deathDate": "2025-12-20",
-      "deathDateLabel": "肃清流毒",
+      "deathDateLabel": "肃清高尔夫流毒",
       "bgColorFrom": "#690202",
       "borderColor": "#750000",
       "coupletLeft": "若有妖魔兴风浪",
@@ -151,15 +151,15 @@
       ],
       "sidebarNav": [
         {
-          "tag": "决议",
-          "label": "关于将高尔夫永久开除群籍的决定",
-          "articleKey": "decision",
-          "style": ""
-        },
-        {
           "tag": "报告",
           "label": "关于高尔夫在12月动乱中所犯错误的报告",
           "articleKey": "report",
+          "style": ""
+        },
+        {
+          "tag": "决议",
+          "label": "关于将高尔夫永久开除群籍的决定",
+          "articleKey": "decision",
           "style": ""
         }
       ],
