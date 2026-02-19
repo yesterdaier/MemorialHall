@@ -129,7 +129,7 @@
       "id": "char_1771468545632",
       "name": "高尔夫球爱好者",
       "status": "purged",
-      "statusText": "",
+      "statusText": "素草流毒 · 遗臭万年",
       "imagePath": "images/golf.jpg",
       "deathDate": "2026-02-19",
       "deathDateLabel": "离开我们",
@@ -138,9 +138,9 @@
       "coupletLeft": "此处填写左联",
       "coupletRight": "此处填写右联",
       "hallTitle": "流毒纪念堂",
-      "hallSubtitle": "",
-      "hasStamp": false,
-      "stampText": "",
+      "hallSubtitle": "绝不容忍开盒行为",
+      "hasStamp": true,
+      "stampText": "流毒",
       "funeralCommittee": "",
       "banners": [
         {
