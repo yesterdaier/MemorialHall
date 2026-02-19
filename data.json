@@ -133,11 +133,11 @@
       "imagePath": "images/golf.jpg",
       "deathDate": "2025-12-20",
       "deathDateLabel": "肃清流毒",
-      "bgColorFrom": "#1a2a3a",
-      "borderColor": "#7d00fa",
+      "bgColorFrom": "#690202",
+      "borderColor": "#750000",
       "coupletLeft": "若有妖魔兴风浪",
       "coupletRight": "群友奋起灭豺狼",
-      "hallTitle": "流毒纪念堂",
+      "hallTitle": "坚决肃清高尔夫爱好者流毒",
       "hallSubtitle": "素草绝不容忍开盒行为",
       "hasStamp": true,
       "stampText": "流 毒",
@@ -146,7 +146,7 @@
         {
           "text": "关于高尔夫在12月动乱中所犯错误的报告",
           "style": "critical",
-          "articleKey": "decision"
+          "articleKey": "report"
         }
       ],
       "sidebarNav": [
