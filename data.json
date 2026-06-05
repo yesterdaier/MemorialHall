@@ -1,6 +1,33 @@
 {
   "siteTitle": "素草英灵殿",
   "footer": "© 2026 长崎素世爱与吐槽吧群 / 水电站宣传部 / 乌思藏青年茶话会",
+  "homeSections": [
+    {
+      "key": "admin",
+      "title": "吧务管理",
+      "subtitle": "素槽治理沿革",
+      "roles": [
+        {
+          "key": "owner",
+          "title": "群主"
+        },
+        {
+          "key": "manager",
+          "title": "管理"
+        }
+      ]
+    },
+    {
+      "key": "main",
+      "title": "主要群友",
+      "subtitle": "群聊人物纪事"
+    },
+    {
+      "key": "toxic",
+      "title": "流毒分子",
+      "subtitle": "反面材料存档"
+    }
+  ],
   "characters": [
     {
       "id": "im",
@@ -18,6 +45,10 @@
       "hallSubtitle": "致我们终将逝去的时光",
       "hasStamp": false,
       "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "owner",
+      "homeNote": "第一任群主 任期待补充",
+      "homeOrder": 1,
       "funeralCommittee": "<strong>核心成员：</strong>洗涤剂量子、秋、眼镜豆、sa、风水云、吹角清寒、不知<br><strong>参与群众：</strong>全体长崎素世爱与吐槽吧群友、乌思藏青年茶话会成员",
       "banners": [
         {
@@ -71,6 +102,10 @@
       "hallSubtitle": "致我们青涩的感情",
       "hasStamp": true,
       "stampText": "已撤销",
+      "homeSection": "toxic",
+      "homeRole": "",
+      "homeNote": "流毒记录 任期待补充",
+      "homeOrder": 1,
       "funeralCommittee": "<strong>委员名单：</strong>Imagedunuage、眼镜豆、洗涤剂量子、秋、sa、鑫<br><strong>参与群众：</strong>全体长崎素世爱与吐槽吧群友、新世纪百货商场成员",
       "banners": [
         {
@@ -141,6 +176,10 @@
       "hallSubtitle": "素草绝不容忍开盒行为",
       "hasStamp": true,
       "stampText": "流 毒",
+      "homeSection": "toxic",
+      "homeRole": "",
+      "homeNote": "流毒记录 任期待补充",
+      "homeOrder": 2,
       "funeralCommittee": "",
       "banners": [
         {
@@ -194,6 +233,10 @@
       "hallSubtitle": "素草绝不容忍弄权行为",
       "hasStamp": true,
       "stampText": "流 毒",
+      "homeSection": "toxic",
+      "homeRole": "",
+      "homeNote": "流毒记录 任期待补充",
+      "homeOrder": 3,
       "funeralCommittee": "",
       "banners": [
         {
@@ -235,6 +278,10 @@
       "hallSubtitle": "致素槽最初的岁月",
       "hasStamp": true,
       "stampText": "流 毒",
+      "homeSection": "toxic",
+      "homeRole": "",
+      "homeNote": "流毒记录 任期待补充",
+      "homeOrder": 4,
       "funeralCommittee": "",
       "banners": [
         {
