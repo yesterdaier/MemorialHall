@@ -338,12 +338,12 @@
       "statusText": "开天辟地 创建素槽",
       "imagePath": "images/meng.jpg",
       "deathDate": "2026-02-21",
-      "deathDateLabel": "光荣隐退",
-      "bgColorFrom": "#ff0066",
+      "deathDateLabel": "梦指导 光荣隐退",
+      "bgColorFrom": "#520021",
       "borderColor": "#ff007b",
       "coupletLeft": "梦女因人成一吧",
       "coupletRight": "素槽因梦有开篇",
-      "hallTitle": "同志纪念堂",
+      "hallTitle": "晚安梦梦梦 同志纪念堂",
       "hallSubtitle": "致一切故事的始发点",
       "hasStamp": false,
       "stampText": "",
@@ -354,7 +354,7 @@
       "funeralCommittee": "",
       "banners": [
         {
-          "text": "横幅文字",
+          "text": "梦指导不再担任群主的公告",
           "style": "im-style",
           "articleKey": "main"
         }
