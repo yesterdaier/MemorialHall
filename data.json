@@ -105,7 +105,7 @@
       "homeSection": "toxic",
       "homeRole": "",
       "homeNote": "2025.11.17隐退",
-      "homeOrder": 1,
+      "homeOrder": 2,
       "funeralCommittee": "<strong>委员名单：</strong>Imagedunuage、眼镜豆、洗涤剂量子、秋、sa、鑫<br><strong>参与群众：</strong>全体长崎素世爱与吐槽吧群友、新世纪百货商场成员",
       "banners": [
         {
@@ -236,7 +236,7 @@
       "homeSection": "toxic",
       "homeRole": "",
       "homeNote": "2026.3.18肃清",
-      "homeOrder": 3,
+      "homeOrder": 4,
       "funeralCommittee": "",
       "banners": [
         {
@@ -281,7 +281,7 @@
       "homeSection": "toxic",
       "homeRole": "",
       "homeNote": "2025.10.18肃清",
-      "homeOrder": 4,
+      "homeOrder": 1,
       "funeralCommittee": "",
       "banners": [
         {
@@ -339,8 +339,8 @@
       "imagePath": "images/meng.jpg",
       "deathDate": "2026-02-21",
       "deathDateLabel": "光荣隐退",
-      "bgColorFrom": "#ff2e2e",
-      "borderColor": "#d62828",
+      "bgColorFrom": "#ff0066",
+      "borderColor": "#ff007b",
       "coupletLeft": "梦女因人成一吧",
       "coupletRight": "素槽因梦有开篇",
       "hallTitle": "同志纪念堂",
