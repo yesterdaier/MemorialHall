@@ -538,8 +538,8 @@
     {
       "id": "char_1780693731912",
       "name": "珺宁",
-      "status": "honor",
-      "statusText": "",
+      "status": "normal",
+      "statusText": "群主",
       "imagePath": "images/jn.jpg",
       "deathDate": "2026-05-30",
       "deathDateLabel": "担任群主",
