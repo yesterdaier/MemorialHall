@@ -4,8 +4,8 @@
   "homeSections": [
     {
       "key": "admin",
-      "title": "吧务管理",
-      "subtitle": "素槽治理沿革",
+      "title": "吧务",
+      "subtitle": "",
       "roles": [
         {
           "key": "owner",
@@ -19,13 +19,13 @@
     },
     {
       "key": "main",
-      "title": "主要群友",
-      "subtitle": "群聊人物纪事"
+      "title": "群友",
+      "subtitle": ""
     },
     {
       "key": "toxic",
-      "title": "流毒分子",
-      "subtitle": "反面材料存档"
+      "title": "流毒",
+      "subtitle": ""
     }
   ],
   "characters": [
