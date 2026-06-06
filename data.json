@@ -538,7 +538,7 @@
     {
       "id": "char_1780693731912",
       "name": "珺宁",
-      "status": "normal",
+      "status": "honor",
       "statusText": "群主",
       "imagePath": "images/jn.jpg",
       "deathDate": "2026-05-30",
@@ -555,6 +555,816 @@
       "homeRole": "owner",
       "homeNote": "群主 5.30-今",
       "homeOrder": 6,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780706145012",
+      "name": "绩溪soyorin",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/jx.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 10.3-11.21",
+      "homeOrder": 1,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780706284326",
+      "name": "微笑小月亮",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/wxxyl.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 10.3-11.3",
+      "homeOrder": 2,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780706326920",
+      "name": "眼镜豆",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/yjd.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 10.3-1.15",
+      "homeOrder": 3,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780706553097",
+      "name": "不知",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/bz.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 11.3-4.23",
+      "homeOrder": 4,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780706632960",
+      "name": "鑫",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/xin.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 10.29-11.18",
+      "homeOrder": 5,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780706852849",
+      "name": "空割きめ",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/kong.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 11.21-12.02",
+      "homeOrder": 6,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780706951288",
+      "name": "Setite Antediluvian",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/sa.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 11.21-今",
+      "homeOrder": 7,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780707002805",
+      "name": "Wanghaotain",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/wang.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 11.18-今",
+      "homeOrder": 18,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780707127444",
+      "name": "风水云",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/fsy.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 12.02-1.21",
+      "homeOrder": 19,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780707214966",
+      "name": "矢禾女",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/shn.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 3.19-",
+      "homeOrder": 20,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780707397428",
+      "name": "sangfei",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/sangfei.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理",
+      "homeOrder": 22,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780707539601",
+      "name": "西园寺",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/xys.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 3.18-今",
+      "homeOrder": 23,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780707596247",
+      "name": "米兰笛小铁匠",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/milan.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 3.18-今",
+      "homeOrder": 24,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780707629418",
+      "name": "拉萨之虎",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/lasa.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "3.18-今",
+      "homeOrder": 25,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780708165908",
+      "name": "梦言jacobin",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/my.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "水电站 4.12-今",
+      "homeOrder": 26,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780708274450",
+      "name": "来日方长",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/lrfc.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "水电站 3.18-4.12",
+      "homeOrder": 27,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780708392310",
+      "name": "good time",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "images/gt.jpg",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理",
+      "homeOrder": 21,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1780708522342",
+      "name": "平凡森林的虾仁蛋炒饭",
+      "status": "honor",
+      "statusText": "",
+      "imagePath": "",
+      "deathDate": "2026-06-06",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "山头",
+      "homeOrder": 28,
       "funeralCommittee": "",
       "banners": [
         {
