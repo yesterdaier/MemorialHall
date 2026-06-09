@@ -1391,11 +1391,11 @@
       ]
     },
     {
-      "id": "char_1780995317310",
-      "name": "羲和",
+      "id": "char_1780995451511",
+      "name": "陕西大锤哥",
       "status": "purged",
-      "statusText": "能图大王",
-      "imagePath": "images/xh.jpg",
+      "statusText": "素草流毒",
+      "imagePath": "images/dcg.jpg",
       "deathDate": "2026-06-09",
       "deathDateLabel": "离开我们",
       "bgColorFrom": "#1a2a3a",
@@ -1408,8 +1408,8 @@
       "stampText": "流 毒",
       "homeSection": "toxic",
       "homeRole": "",
-      "homeNote": "2026.5肃清",
-      "homeOrder": 5,
+      "homeNote": "2025.10肃清",
+      "homeOrder": -1,
       "funeralCommittee": "",
       "banners": [
         {
@@ -1436,11 +1436,11 @@
       ]
     },
     {
-      "id": "char_1780995372592",
-      "name": "陕西大锤哥",
+      "id": "char_1780995481360",
+      "name": "羲和",
       "status": "purged",
-      "statusText": "素草流毒",
-      "imagePath": "images/dcg.jpg",
+      "statusText": "能图大王",
+      "imagePath": "images/xh.jpg",
       "deathDate": "2026-06-09",
       "deathDateLabel": "离开我们",
       "bgColorFrom": "#1a2a3a",
@@ -1453,8 +1453,8 @@
       "stampText": "流 毒",
       "homeSection": "toxic",
       "homeRole": "",
-      "homeNote": "2025.10肃清",
-      "homeOrder": -1,
+      "homeNote": "2026.5肃清",
+      "homeOrder": 30,
       "funeralCommittee": "",
       "banners": [
         {
