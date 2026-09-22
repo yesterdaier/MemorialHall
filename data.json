@@ -404,7 +404,7 @@
       "id": "char_1780693211780",
       "name": "洗涤剂量子",
       "status": "honor",
-      "statusText": "管理员",
+      "statusText": "卸任管理员",
       "imagePath": "images/xdjlz.jpg",
       "deathDate": "2026-01-21",
       "deathDateLabel": "洗涤剂量子卸任群主",
@@ -494,7 +494,7 @@
       "id": "char_1780693546374",
       "name": "心上秋",
       "status": "honor",
-      "statusText": "管理员",
+      "statusText": "卸任管理员",
       "imagePath": "images/aki.jpg",
       "deathDate": "2026-05-30",
       "deathDateLabel": "心上秋卸任群主",
@@ -1455,6 +1455,546 @@
       "homeRole": "",
       "homeNote": "2026.5肃清",
       "homeOrder": 30,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790098406435",
+      "name": "圣人帕拉斯",
+      "status": "normal",
+      "statusText": "水电站4.12-今",
+      "imagePath": "images/帕拉斯.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "水电站4.12-今",
+      "homeOrder": 31,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790098471104",
+      "name": "渔歌子",
+      "status": "normal",
+      "statusText": "水电站4.12-今",
+      "imagePath": "images/渔歌子.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "水电站4.12-今",
+      "homeOrder": 32,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790100060886",
+      "name": "自己互相监督",
+      "status": "normal",
+      "statusText": "水电站4.12-5.1",
+      "imagePath": "images/自己互相监督.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "水电站4.12-5.1",
+      "homeOrder": 33,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790100108668",
+      "name": "冯唐",
+      "status": "normal",
+      "statusText": "",
+      "imagePath": "images/冯唐.jpg",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理8.11-9.7",
+      "homeOrder": 34,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790100700550",
+      "name": "氵宁",
+      "status": "normal",
+      "statusText": "",
+      "imagePath": "images/宁宁.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理8.13-9.7",
+      "homeOrder": 35,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790100768242",
+      "name": "麦列霍夫",
+      "status": "normal",
+      "statusText": "",
+      "imagePath": "images/麦列霍夫.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "main",
+      "homeRole": "",
+      "homeNote": "管理8.13-8.28",
+      "homeOrder": 36,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790100815252",
+      "name": "林曦",
+      "status": "normal",
+      "statusText": "",
+      "imagePath": "images/林曦.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理8.13-8.28",
+      "homeOrder": 37,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790100851536",
+      "name": "沐鄉让恋",
+      "status": "normal",
+      "statusText": "",
+      "imagePath": "images/艾玛.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 8.13-8.28",
+      "homeOrder": 38,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790100913101",
+      "name": "四羟小娶",
+      "status": "normal",
+      "statusText": "",
+      "imagePath": "images/小娶.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 8.13-今",
+      "homeOrder": 41,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790100957096",
+      "name": "korman233",
+      "status": "normal",
+      "statusText": "",
+      "imagePath": "images/korman.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 8.13-今",
+      "homeOrder": 42,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790100980360",
+      "name": "KTN",
+      "status": "normal",
+      "statusText": "",
+      "imagePath": "images/ktn.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "admin",
+      "homeRole": "manager",
+      "homeNote": "管理 8.13-8.14",
+      "homeOrder": 39,
+      "funeralCommittee": "",
+      "banners": [
+        {
+          "text": "横幅文字",
+          "style": "im-style",
+          "articleKey": "main"
+        }
+      ],
+      "sidebarNav": [
+        {
+          "tag": "悼词",
+          "label": "正文",
+          "articleKey": "main",
+          "style": ""
+        }
+      ],
+      "articles": [
+        {
+          "key": "main",
+          "title": "悼念文章",
+          "meta": "治丧委员会",
+          "body": "<p>在此填写正文内容。</p>"
+        }
+      ]
+    },
+    {
+      "id": "char_1790101173997",
+      "name": "三峡电网",
+      "status": "normal",
+      "statusText": "",
+      "imagePath": "images/电网.png",
+      "deathDate": "2026-09-22",
+      "deathDateLabel": "离开我们",
+      "bgColorFrom": "#1a2a3a",
+      "borderColor": "#4da6ff",
+      "coupletLeft": "此处填写左联",
+      "coupletRight": "此处填写右联",
+      "hallTitle": "英灵同志纪念堂",
+      "hallSubtitle": "",
+      "hasStamp": false,
+      "stampText": "",
+      "homeSection": "main",
+      "homeRole": "",
+      "homeNote": "管理 8.13-9.7",
+      "homeOrder": 40,
       "funeralCommittee": "",
       "banners": [
         {
