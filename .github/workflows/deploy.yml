@@ -1,7 +1,9 @@
-name: 部署英灵殿到 GitHub Pages
+name: 部署素槽群史到 GitHub Pages
 
 on:
   push:
+    branches: [ "main", "codex/**" ]
+  pull_request:
     branches: [ "main" ]
   workflow_dispatch:
 
@@ -11,18 +13,49 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.ref }}"
   cancel-in-progress: false
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate data, migration, references and publishing
+        run: npm test
+
+      - name: Build public files only
+        run: npm run build
+
+      - name: Save reviewable site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: soyo-static-site
+          path: dist/
+          include-hidden-files: true
+
   deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Download validated site
+        uses: actions/download-artifact@v4
+        with:
+          name: soyo-static-site
+          path: dist/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -30,7 +63,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: dist/
 
       - name: Deploy to GitHub Pages
         id: deployment

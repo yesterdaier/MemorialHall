@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {validation,publicData} from '../assets/core.js';
+const root=path.resolve(fileURLToPath(new URL('..',import.meta.url)));
+const out=path.join(root,'dist');
+const data=JSON.parse(fs.readFileSync(path.join(root,'data.json'),'utf8'));
+const check=validation(data),published=publicData(data),publicCheck=validation(published);
+const missing=[...published.media.map(m=>m.path),...published.sources.filter(s=>s.path).map(s=>s.path)].filter(p=>!fs.existsSync(path.join(root,p)));
+const errors=[...new Set([...check.errors,...publicCheck.errors,...missing.map(p=>'缺失文件：'+p)])];
+if(errors.length)throw new Error(errors.join('\n'));
+if(fs.existsSync(out)&&fs.lstatSync(out).isSymbolicLink())throw new Error('Refusing a symlinked output directory');
+if(path.dirname(out)!==root||path.basename(out)!=='dist')throw new Error('Unexpected build output path');
+fs.rmSync(out,{recursive:true,force:true});
+fs.mkdirSync(out,{recursive:true});
+// Only explicitly named website files enter the Pages artifact.
+for(const entry of ['index.html','admin.html','assets','images','sources'])fs.cpSync(path.join(root,entry),path.join(out,entry),{recursive:true,force:true});
+fs.writeFileSync(path.join(out,'data.json'),JSON.stringify(published,null,2)+'\n');
+fs.writeFileSync(path.join(out,'.nojekyll'),'');
+console.log(JSON.stringify({output:out,characters:published.characters.length,events:published.events.length,warnings:check.warnings.length}));
