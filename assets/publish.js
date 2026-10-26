@@ -36,5 +36,10 @@ export async function deploymentStatus(cfg,sha,fetcher=fetch){
     const runs=(result.workflow_runs||[]).filter(r=>r.head_sha===sha&&/deploy|pages|部署/i.test(r.name||r.path||''));
     if(!runs.length)return {state:'waiting',message:'尚未发现此提交的部署任务。非部署分支不会更新正式网站。'};
     if(runs.some(r=>r.conclusion&&r.conclusion!=='success'))return {state:'failed',message:'部署失败，请查看 GitHub Actions。',url:runs.find(r=>r.conclusion&&r.conclusion!=='success').html_url};
-    const done=runs.every(r=>r.status==='completed'&&r.conclusion==='success');return {state:done?'success':'running',message:done?'部署任务成功，网站已部署。':'已提交，部署正在运行。',url:runs[0].html_url};
+    if(runs.some(r=>r.status!=='completed'))return {state:'running',message:'已提交，工作流正在运行。',url:runs[0].html_url};
+    const jobs=(await Promise.all(runs.map(r=>api('/actions/runs/'+r.id+'/jobs?per_page=100')))).flatMap(r=>r.jobs||[]);
+    const deployJobs=jobs.filter(j=>/^(deploy|deployment|deploy[ _-].*|部署.*)$/i.test(j.name||''));
+    if(deployJobs.some(j=>j.conclusion==='success'))return {state:'success',message:'部署任务成功，网站已部署。',url:runs[0].html_url};
+    if(deployJobs.some(j=>j.status!=='completed'))return {state:'running',message:'部署任务正在运行。',url:runs[0].html_url};
+    return {state:'waiting',message:'校验已完成，但此提交没有成功执行网站部署。测试分支只构建预览工件；请检查部署分支与任务。',url:runs[0].html_url};
 }

@@ -7592,14 +7592,14 @@
       "sequence": null,
       "order": 17,
       "time": {
-        "label": "2026-04-12 — 待考",
-        "start": "2026-04-12",
+        "label": "第二代期间；起止待考",
+        "start": null,
         "end": null,
-        "precision": "day",
+        "precision": "unknown",
         "dates": [],
         "ongoing": false
       },
-      "notes": "名称见PDF；建立日据旧站清角吹寒计时字段。",
+      "notes": "群名见原稿第17页；旧站“花明楼建立”计时字段保留在人物页，不作为本表建群日期依据。",
       "publication": "published",
       "sourceRefs": [
         {
@@ -7607,10 +7607,6 @@
           "pages": [
             17
           ]
-        },
-        {
-          "sourceId": "source-legacy",
-          "pages": []
         }
       ],
       "eventIds": []
