@@ -7628,15 +7628,7 @@
       },
       "notes": "31日启用水电站名义。",
       "publication": "published",
-      "sourceRefs": [
-        {
-          "sourceId": "source-history",
-          "pages": [
-            5,
-            12
-          ]
-        }
-      ],
+      "sourceRefs": [],
       "eventIds": [
         "station",
         "night-talk",
@@ -7660,16 +7652,7 @@
       },
       "notes": "别称小山头、小汕头；山头事变后独立。",
       "publication": "published",
-      "sourceRefs": [
-        {
-          "sourceId": "source-history",
-          "pages": [
-            5,
-            9,
-            12
-          ]
-        }
-      ],
+      "sourceRefs": [],
       "eventIds": [
         "station",
         "night-talk",
@@ -7693,15 +7676,7 @@
       },
       "notes": "沿用同一群聊；后续群名和变更日待补。",
       "publication": "published",
-      "sourceRefs": [
-        {
-          "sourceId": "source-history",
-          "pages": [
-            9,
-            12
-          ]
-        }
-      ],
+      "sourceRefs": [],
       "eventIds": [
         "station",
         "night-talk",
