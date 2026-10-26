@@ -6127,7 +6127,7 @@
       "volumeId": "vol1",
       "periodId": "first-three",
       "relatedPeriodIds": [
-        "soyo"
+        "first-three"
       ],
       "order": 2,
       "time": {
@@ -7615,8 +7615,8 @@
       "id": "s-shantou-pre",
       "groupId": "g-shantou",
       "category": "shantou",
-      "title": "山头前身（封存六人群）",
-      "sequence": null,
+      "title": "山头前身",
+      "sequence": 0,
       "order": 18,
       "time": {
         "label": "2025-10-29 — 2025-10-31",
@@ -7648,7 +7648,7 @@
       "groupId": "g-shantou",
       "category": "shantou",
       "title": "素槽水电站扩大会议",
-      "sequence": null,
+      "sequence": 1,
       "order": 19,
       "time": {
         "label": "2025-10-31 — 2025-11-18",
@@ -7681,12 +7681,12 @@
       "groupId": "g-shantou",
       "category": "shantou",
       "title": "新世纪百货商场",
-      "sequence": null,
+      "sequence": 2,
       "order": 20,
       "time": {
-        "label": "2025.11.18改名；后续名称起止待考",
+        "label": "",
         "start": "2025-11-18",
-        "end": null,
+        "end": "2025-12-22",
         "precision": "day",
         "dates": [],
         "ongoing": false
@@ -7707,6 +7707,128 @@
         "night-talk",
         "shantou"
       ]
+    },
+    {
+      "id": "groupS-cb47b8ee-05a",
+      "title": "乌斯藏青年茶话会",
+      "order": 22,
+      "publication": "published",
+      "completion": "pending",
+      "body": "",
+      "summary": "",
+      "editorialNotes": [],
+      "sourceRefs": [],
+      "groupId": "g-shantou",
+      "category": "shantou",
+      "sequence": 3,
+      "time": {
+        "label": "",
+        "start": "2025-12-22",
+        "end": "2026-02-05",
+        "precision": "day",
+        "dates": [],
+        "ongoing": false
+      },
+      "notes": "",
+      "eventIds": [
+        "kong-crisis"
+      ]
+    },
+    {
+      "id": "groupS-53c66b32-fe8",
+      "title": "松江学院/浦东革委/铜湾革委",
+      "order": 23,
+      "publication": "published",
+      "completion": "pending",
+      "body": "",
+      "summary": "",
+      "editorialNotes": [],
+      "sourceRefs": [],
+      "groupId": "g-shantou",
+      "category": "shantou",
+      "sequence": 4,
+      "time": {
+        "label": "",
+        "start": "2026-02-05",
+        "end": "2026-02-22",
+        "precision": "day",
+        "dates": [],
+        "ongoing": false
+      },
+      "notes": "",
+      "eventIds": []
+    },
+    {
+      "id": "groupS-05fc5aca-a45",
+      "title": "中关村科技园",
+      "order": 24,
+      "publication": "published",
+      "completion": "pending",
+      "body": "",
+      "summary": "",
+      "editorialNotes": [],
+      "sourceRefs": [],
+      "groupId": "g-shantou",
+      "category": "shantou",
+      "sequence": 5,
+      "time": {
+        "label": "",
+        "start": "2026-02-22",
+        "end": "2026-04-02",
+        "precision": "day",
+        "dates": [],
+        "ongoing": false
+      },
+      "notes": "",
+      "eventIds": []
+    },
+    {
+      "id": "groupS-88346a98-d73",
+      "title": "大中华橡胶厂",
+      "order": 25,
+      "publication": "published",
+      "completion": "pending",
+      "body": "",
+      "summary": "",
+      "editorialNotes": [],
+      "sourceRefs": [],
+      "groupId": "g-shantou",
+      "category": "shantou",
+      "sequence": 6,
+      "time": {
+        "label": "",
+        "start": "2026-04-02",
+        "end": "2026-07-22",
+        "precision": "day",
+        "dates": [],
+        "ongoing": false
+      },
+      "notes": "",
+      "eventIds": []
+    },
+    {
+      "id": "groupS-03e04ded-3d5",
+      "title": "键政后御茶会",
+      "order": 26,
+      "publication": "published",
+      "completion": "pending",
+      "body": "",
+      "summary": "",
+      "editorialNotes": [],
+      "sourceRefs": [],
+      "groupId": "g-shantou",
+      "category": "shantou",
+      "sequence": 7,
+      "time": {
+        "label": "",
+        "start": "2026-07-22",
+        "end": null,
+        "precision": "day",
+        "dates": [],
+        "ongoing": true
+      },
+      "notes": "",
+      "eventIds": []
     }
   ],
   "tenures": [
@@ -9999,6 +10121,28 @@
       "alt": "麦列霍夫",
       "caption": "",
       "publication": "published"
+    }
+  ],
+  "navigation": [
+    {
+      "route": "chronicle",
+      "label": "素槽纪事"
+    },
+    {
+      "route": "people",
+      "label": "人物列传"
+    },
+    {
+      "route": "tables/main",
+      "label": "群聊与管理表"
+    },
+    {
+      "route": "gazetteers",
+      "label": "相关诸志"
+    },
+    {
+      "route": "search",
+      "label": "搜索"
     }
   ]
 }
